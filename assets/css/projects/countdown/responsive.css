@@ -23,7 +23,7 @@
     }
 
     #countdown-logo-rev {
-        height: 100px !important;
+        height: 100px;
     }
 
     .container:hover {
@@ -31,7 +31,7 @@
     }
 
     .container:hover #timer {
-        font-size: 45px;
+        font-size: 30px;
     }
 
     .timers-wrapper {
@@ -52,7 +52,7 @@
         }
 
         #timer {
-            font-size: 40px;
+            font-size: 30px;
         }
     }
 
