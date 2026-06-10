@@ -1,0 +1,64 @@
+/* #region // MAIN */
+header{
+    position: relative;
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-size: 3em;
+    text-align: center;
+
+    width: 100%;
+    padding: 0px;
+
+    box-sizing: border-box;
+    z-index: 1;
+
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(263, 40%, 30%);
+}
+
+.navbar{
+    text-align: center;
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navbar ul{
+    overflow: hidden;
+    list-style-type: none;
+
+    font-family: 'Oswald';
+    font-size: 15px;
+    text-align: center;
+
+    margin: 0px;
+    padding: 0px;
+       
+    background-color: hsl(263, 40%, 20%);
+}
+
+.navbar li{
+    display: inline;
+}
+
+.navbar a{
+    display: inline-block;
+
+    text-align: center;
+
+    width: 100px;
+    padding: 12px;
+
+    color:hsl(0, 0%, 70%);
+
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover{
+    background-color: hsl(263, 40%, 10%);
+}
+
+#navbar-selected{
+    color:hsl(0, 0%, 100%);
+}
+/* #endregion */

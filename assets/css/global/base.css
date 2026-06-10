@@ -1,0 +1,179 @@
+/* #region // GENERAL */
+body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-family: 'Segoe UI Black';
+    font-size: 35px;
+    text-align: center;
+}
+
+p{
+    font-family: monospace;
+    font-size: 20px;
+}
+
+#project-title{
+    font-size: 70px;
+    padding: 43px;
+}
+/* #endregion */
+
+/* #region // LOGO */
+.logo{
+    height: 200px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.logo_alt{
+    position: absolute;
+
+    top: 16px;
+    left: 50px;
+    height: 25px;
+    margin: 0;
+}
+/* #endregion */
+
+/* #region // MAINTENCE */
+.maintence{
+    font-family: monospace;
+    font-size: 2em;
+    text-align: center;
+
+    margin-top: 50px;
+}
+/* #endregion */
+
+/* #region // BUTTON - AUDIO */
+#button-audio{
+    position: relative;
+
+    font-size: 12px;
+
+    padding: 10px;
+
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 10px;
+
+    background-color: hsla(0, 0%, 100%, 0);
+}
+
+#button-audio:hover{
+    background-color: hsla(0, 0%, 100%, 0.2);
+}
+/* #endregion */
+
+/* #region // BUTTON - LANG */
+#button-lang{
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+
+    padding: 0;
+    z-index: 2000;
+
+    border: none;
+
+    color: hsl(0, 0%, 100%);
+
+    background: none;
+
+    transition: color 0.2s;
+}
+
+#button-lang:hover{
+    color: hsl(0, 0%, 75%);
+}
+
+.button-lang-icon{
+    position: relative;
+
+    top: -1px;
+    margin-right: 5px;
+}
+
+.lang-dropdown{
+    position: absolute;
+    top: 100%;
+    right: -15px;
+    margin-top: 10px;
+    
+    background-color: hsla(0, 0%, 100%, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 4px 15px hsla(0, 0%, 0%, 0.2);
+    
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 2001;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    min-width: 200px;
+}
+
+.lang-dropdown.show{
+    display: flex;
+}
+
+.lang-dropdown-item{
+    padding: 15px 20px;
+    font-family: monospace;
+    font-size: 16px;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    text-align: center;
+}
+
+.lang-dropdown-item:hover{
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(0, 0%, 0%);
+}
+/* #endregion */
+
+/* #region // RESPONSIVE */
+@media (pointer: fine) and (hover: hover){
+    @media (max-width: 768px){
+        .navbar a{
+            width: 90px;
+        }
+
+        #project-title{
+            font-size: 50px;
+            padding: 70px;
+        }
+    }
+}
+
+@media (pointer: coarse) and (hover: none){
+    header{
+        font-size: 25px;
+        padding: 20px;
+    }
+
+    .logo{
+        height: 100px;
+        padding: 0px;
+    }
+
+    #project-title{
+        font-size: 50px;
+        padding: 1px;
+    }
+}
+/* #endregion */

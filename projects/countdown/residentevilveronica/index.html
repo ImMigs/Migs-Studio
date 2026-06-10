@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/img/projects/countdown/icons/rev.jpg">
+    <title>Resident Evil Veronica | Countdown</title>
+
+    <!-- #region // CSS -->
+    <link rel="stylesheet" href="/assets/css/global/base.css">
+    <link rel="stylesheet" href="/assets/css/global/subnavbar.css">
+
+    <link rel="stylesheet" href="/assets/css/projects/countdown/responsive.css">
+    <link rel="stylesheet" href="/assets/css/projects/countdown/style.css">
+    <!-- #endregion -->
+
+    <!-- #region // FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/161ec40ef8.js" crossorigin="anonymous"></script>
+    <!-- #endregion -->
+
+    <style>
+        body {
+            background: url('/assets/img/projects/countdown/backgrounds/rev.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- #region // SUBNAVBAR -->
+    <div class="subnavbar">
+        <div id="subnavbar-background"></div>
+        <a href="/" target="_self"><img src="/assets/img/global/logo_alt.png" alt="logo" class="logo_alt"></a>
+        <ul class="subnavbar-left">
+            <li class="subnavbar-item"><a href="https://www.residentevil.com/veronica/" target="_blank" data-i18n="countdown_website"></a></li>
+            <li class="subnavbar-item"><a href="https://www.youtube.com/watch?v=uxUMXniTfjM&t=5s" target="_blank">Trailer 1</a></li>
+        </ul>
+
+        <div class="subnavbar-right">
+            <button id="button-lang">🌐</button> 
+            <!-- <button id="button-audio">🔇</button>-->
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region // TIMER -->
+    <div class="timers-wrapper">
+        <div class="timer-group">
+            <img src="/assets/img/projects/countdown/logos/rev.png" class="logo" alt="logo">
+            <div class="container">
+                <div id="timer">2027</div>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+    
+    <script>
+        // AUDIO
+        // window.customAudioPath = '/assets/audios/projetos/countdown/rev_theme.mp3';
+    </script>
+    <script src="/assets/js/projects/countdown/countdown.js"></script>
+    <script>
+        // TIMER
+        //const targetDate = new Date(Date.UTC(2026, 0, 0, 0, 0, 0));
+        //new CountdownTimer(targetDate, 'timer');
+    </script>
+
+    <script src="/assets/js/core/base.js"></script>
+</body> 
