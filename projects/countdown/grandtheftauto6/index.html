@@ -4,23 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/assets/img/projects/countdown/icons/icon-rev.jpg">
-    <title>Resident Evil Veronica | Countdown</title>
+    <link rel="icon" type="image/png" href="/assets/img/projetos/countdown/icons/gta6.jpg">
+    <title>Grand Theft Auto 6 | Countdown</title>
 
     <!-- #region // OPEN GRAPH -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://migs-studio.com.br/projects/countdown/residentevilveronica">
-    <meta property="og:title" content="Resident Evil Veronica | Countdown">
+    <meta property="og:url" content="https://migs-studio.com.br/projects/countdown/grandtheftauto6">
+    <meta property="og:title" content="Grand Theft Auto 6 | Countdown">
     <meta property="og:description"
-        content="A countdown to Resident Evil Veronica, the newest game of the franchise created by Capcom. Releasing in 2027.">
-    <meta property="og:image" content="https://www.migs-studio.com.br/assets/img/projects/countdown/banners/banner-rev.png">
+        content="A countdown to Grand Theft Auto 6, the newest game in the franchise created by Rockstar Games. Releasing in 2026.">
+    <meta property="og:image"
+        content="https://www.migs-studio.com.br/assets/img/projects/countdown/banners/banner-gta6.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://migs-studio.com.br/projects/countdown/residentevilveronica">
-    <meta name="twitter:title" content="Resident Evil Veronica | Countdown">
+    <meta name="twitter:url" content="https://migs-studio.com.br/projects/countdown/grandtheftauto6">
+    <meta name="twitter:title" content="Grand Theft Auto 6 | Countdown">
     <meta name="twitter:description"
-        content="A countdown to Resident Evil Veronica, the newest game of the franchise created by Capcom. Releasing in 2027.">
-    <meta name="twitter:image" content="https://www.migs-studio.com.br/assets/img/projects/countdown/banners/banner-rev.png">
+        content="A countdown to Grand Theft Auto 6, the newest game in the franchise created by Rockstar Games. Releasing in 2026.">
+    <meta name="twitter:image"
+        content="https://www.migs-studio.com.br/assets/img/projects/countdown/banners/banner-gta6.png">
     <!-- #endregion -->
 
     <!-- #region // CSS -->
@@ -42,7 +44,7 @@
     <!-- #region // BACKGROUND -->
     <style>
         body {
-            background-image: url('/assets/img/projects/countdown/backgrounds/background-rev.jpg');
+            background-image: url('/assets/img/projects/countdown/backgrounds/background-gta6.png');
             background-size: cover;
         }
     </style>
@@ -55,15 +57,15 @@
         <div id="subnavbar-background"></div>
         <a href="/" target="_self"><img src="/assets/img/global/logo_alt.png" alt="logo" class="logo_alt"></a>
         <ul class="subnavbar-left">
-            <li class="subnavbar-item"><a href="https://www.residentevil.com/veronica/" target="_blank"
-                    data-i18n="countdown_website"></a></li>
-            <li class="subnavbar-item"><a href="https://www.youtube.com/watch?v=uxUMXniTfjM&t=5s"
-                    target="_blank">Trailer 1</a></li>
+            <li class="subnavbar-item"><a href="https://www.youtube.com/watch?v=QdBZY2fkU-0" target="_blank">Trailer
+                    1</a></li>
+            <li class="subnavbar-item"><a href="https://www.youtube.com/watch?v=VQRLujxTm3c" target="_blank">Trailer
+                    2</a></li>
         </ul>
 
         <div class="subnavbar-right">
             <button id="button-lang">🌐</button>
-            <!-- <button id="button-audio">🔇</button>-->
+            <button id="button-audio">🔇</button>
         </div>
     </div><br><br>
     <!-- #endregion -->
@@ -71,10 +73,10 @@
     <!-- #region // TIMER -->
     <div class="timers-wrapper">
         <div class="timer-group">
-            <img src="/assets/img/projects/countdown/logos/logo-rev.webp" class="countdown-logo" id="countdown-logo-rev"
+            <img src="/assets/img/projects/countdown/logos/logo-gta6.png" class="countdown-logo" id="countdown-logo-rev"
                 alt="logo">
             <div class="container">
-                <div id="timer">2027</div>
+                <div id="timer"></div>
             </div>
         </div>
     </div>
@@ -82,17 +84,17 @@
 
     <!-- #region // AUDIO SETUP -->
     <script>
-        // window.customAudioPath = '/assets/audios/projetos/countdown/audio_rev.mp3';
+        window.customAudioPath = '/assets/audio/projects/countdown/audio_gta6.mp3';
     </script>
     <!-- #endregion -->
 
-    <!-- #region // TIMER SETUP -->
+        <!-- #region // TIMER SETUP -->
     <script src="/assets/js/projects/countdown/countdown.js"></script>
     <script>
-        // const targetDate = new Date(Date.UTC(2027, 0, 0, 0, 0, 0));
-        // new CountdownTimer(targetDate, 'timer');
+        const targetDate = new Date(Date.UTC(2026, 10, 19, 0, 0, 0));
+        new CountdownTimer(targetDate, 'timer');
     </script>
     <!-- #endregion -->
-    
+
     <script src="/assets/js/core/base.js"></script>
 </body>
