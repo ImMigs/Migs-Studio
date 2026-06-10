@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/img/projects/countdown/icons/icon-re9.png">
+    <title>Resident Evil Requiem | Countdown</title>
+
+    <!-- #region // OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://migs-studio.com.br/projects/countdown/residentevilrequiem">
+    <meta property="og:title" content="Resident Evil Requiem | Countdown">
+    <meta property="og:description"
+        content="A countdown to Resident Evil Requiem, made by Capcom, released in 2026. There is a confirmed DLC for this title, but currently no release date has been announced.">
+    <meta property="og:image"
+        content="https://www.migs-studio.com.br/assets/img/projects/countdown/banners/banner-re9.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://migs-studio.com.br/projects/countdown/residentevilrequiem">
+    <meta name="twitter:title" content="Resident Evil Requiem | Countdown">
+    <meta name="twitter:description"
+        content="A countdown to Resident Evil Requiem, made by Capcom, released in 2026. There is a confirmed DLC for this title, but currently no release date has been announced.">
+    <meta name="twitter:image"
+        content="https://www.migs-studio.com.br/assets/img/projects/countdown/banners/banner-re9.png">
+    <!-- #endregion -->
+
+    <!-- #region // CSS -->
+    <link rel="stylesheet" href="/assets/css/global/base.css">
+    <link rel="stylesheet" href="/assets/css/global/subnavbar.css">
+
+    <link rel="stylesheet" href="/assets/css/projects/countdown/style.css">
+    <link rel="stylesheet" href="/assets/css/projects/countdown/responsive.css">
+    <!-- #endregion -->
+
+    <!-- #region // FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/161ec40ef8.js" crossorigin="anonymous"></script>
+    <!-- #endregion -->
+
+    <!-- #region // BACKGROUND -->
+    <style>
+        body {
+            background-image: url('/assets/img/projects/countdown/backgrounds/background-re9.png');
+            background-size: cover;
+        }
+    </style>
+    <!-- #endregion -->
+</head>
+
+<body>
+    <!-- #region // SUBNAVBAR -->
+    <div class="subnavbar">
+        <div id="subnavbar-background"></div>
+        <a href="/" target="_self"><img src="/assets/img/global/logo_alt.png" alt="logo" class="logo_alt"></a>
+        <ul class="subnavbar-left">
+            <li class="subnavbar-item"><a href="https://www.residentevil.com/requiem/" target="_blank"
+                    data-i18n="countdown_website">-</a></li>
+            <li class="subnavbar-item"><a href="https://www.youtube.com/watch?v=POz1-EmLsTY" target="_blank">Trailer
+                    1</a></li>
+            <li class="subnavbar-item"><a href="https://www.youtube.com/watch?v=0wFNN1f6hF8" target="_blank">Trailer
+                    2</a></li>
+            <li class="subnavbar-item"><a href="https://www.youtube.com/watch?v=T54OWinnymM" target="_blank">Trailer
+                    3</a></li>
+            <li class="subnavbar-item"><a href="https://www.youtube.com/watch?v=7DTMmld4Wzs" target="_blank">Trailer
+                    4</a></li>
+            <li class="subnavbar-item"><a href="https://www.youtube.com/watch?v=i9HIc7GZLa0" target="_blank">Resident
+                    Evil Showcase</a></li>
+        </ul>
+
+        <div class="subnavbar-right">
+            <button id="button-lang">🌐</button>
+            <button id="button-audio">🔇</button>
+        </div>
+    </div><br><br>
+    <!-- #endregion -->
+
+    <!-- #region // TIMER -->
+    <div class="timers-wrapper">
+        <div class="timer-group">
+            <img src="/assets/img/projects/countdown/logos/logo-re9.webp" class="countdown-logo" id="countdown-logo-re9"
+                alt="logo">
+            <div class="container">
+                <div id="timer" data-i18n="countdown_re9_dlc">-</div>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region // AUDIO SETUP -->
+    <script>
+        window.customAudioPath = '/assets/audio/projects/countdown/audio_re9.mp3';
+    </script>
+    <!-- #endregion -->
+
+    <!-- #region // TIMER SETUP -->
+    <script src="/assets/js/projects/countdown/countdown.js"></script>
+    <script>
+        // TIMER
+        // const targetDate = new Date(Date.UTC(2027, 0, 0, 0, 0, 0));
+        // new CountdownTimer(targetDate, 'timer');
+    </script>
+    <!-- #endregion -->
+
+    <script src="/assets/js/core/base.js"></script>
+</body>

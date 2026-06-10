@@ -2,7 +2,7 @@
 @media (pointer: fine) and (hover: hover) {
     @media (max-width: 1500px),
     (max-height: 768px) {
-        #countdown-logo-rev {
+        #countdown-logo-rev, #countdown-logo-re9 {
             height: 125px;
         }
 

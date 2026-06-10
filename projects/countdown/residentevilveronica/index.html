@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/assets/img/projects/countdown/icons/rev.jpg">
+    <link rel="icon" type="image/png" href="/assets/img/projects/countdown/icons/icon-rev.jpg">
     <title>Resident Evil Veronica | Countdown</title>
 
     <!-- #region // OPEN GRAPH -->
@@ -39,12 +39,14 @@
     <script src="https://kit.fontawesome.com/161ec40ef8.js" crossorigin="anonymous"></script>
     <!-- #endregion -->
 
+    <!-- #region // BACKGROUND -->
     <style>
         body {
-            background-image: url('/assets/img/projects/countdown/backgrounds/rev.jpg');
+            background-image: url('/assets/img/projects/countdown/backgrounds/background-rev.jpg');
             background-size: cover;
         }
     </style>
+    <!-- #endregion -->
 </head>
 
 <body>
@@ -69,24 +71,29 @@
     <!-- #region // TIMER -->
     <div class="timers-wrapper">
         <div class="timer-group">
-            <img src="/assets/img/projects/countdown/logos/rev.webp" class="countdown-logo" id="countdown-logo-rev" alt="logo">
+            <img src="/assets/img/projects/countdown/logos/logo-rev.webp" class="countdown-logo" id="countdown-logo-rev"
+                alt="logo">
             <div class="container">
                 <div id="timer">2027</div>
             </div>
         </div>
     </div>
-    <!-- #endregion -->    
+    <!-- #endregion -->
 
+    <!-- #region // AUDIO SETUP -->
     <script>
-        // AUDIO
         // window.customAudioPath = '/assets/audios/projetos/countdown/rev_theme.mp3';
     </script>
+    <!-- #endregion -->
+
+    <!-- #region // TIMER SETUP -->
     <script src="/assets/js/projects/countdown/countdown.js"></script>
     <script>
         // TIMER
         // const targetDate = new Date(Date.UTC(2027, 0, 0, 0, 0, 0));
         // new CountdownTimer(targetDate, 'timer');
     </script>
-
+    <!-- #endregion -->
+    
     <script src="/assets/js/core/base.js"></script>
 </body>

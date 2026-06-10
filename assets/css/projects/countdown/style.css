@@ -48,6 +48,11 @@ body {
 /* #endregion */
 
 /* #region // LOGO */
+#countdown-logo-re9 {
+    height: 200px;
+    transition: height 0.5s ease;
+}
+
 #countdown-logo-rev {
     height: 200px;
     transition: height 0.5s ease;
@@ -73,4 +78,5 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 /* #endregion */

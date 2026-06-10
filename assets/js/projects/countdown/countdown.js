@@ -1,23 +1,32 @@
 // BOTÃO - MUTE
 const muteBtn = document.getElementById('button-audio');
 const audioPath = window.customAudioPath;
-const bgMusic = new Audio(audioPath);
-bgMusic.loop = true;
 
 if (muteBtn) {
-    muteBtn.addEventListener('click', () => {
-        if(bgMusic.paused){
-            bgMusic.play();
-            bgMusic.volume = 1;
-            muteBtn.textContent = '🔊';
-        }else if(bgMusic.volume > 0){
-            bgMusic.volume = 0;
-            muteBtn.textContent = '🔇';
-        }else{
-            bgMusic.volume = 1;
-            muteBtn.textContent = '🔊';
-        }
-    });
+    if (audioPath) {
+        const bgMusic = new Audio(audioPath);
+        bgMusic.loop = true;
+
+        muteBtn.addEventListener('click', () => {
+            if(bgMusic.paused){
+                bgMusic.play().then(() => {
+                    bgMusic.volume = 1;
+                    muteBtn.textContent = '🔊';
+                }).catch(error => {
+                    console.error("Erro ao tocar áudio. Verifique o caminho (audioPath):", error);
+                });
+            }else if(bgMusic.volume > 0){
+                bgMusic.volume = 0;
+                muteBtn.textContent = '🔇';
+            }else{
+                bgMusic.volume = 1;
+                muteBtn.textContent = '🔊';
+            }
+        });
+    } else {
+        // Oculta o botão automaticamente caso não tenha áudio definido no HTML
+        muteBtn.style.display = 'none';
+    }
 }
 
 // TIMER
