@@ -1,37 +1,38 @@
 /* #region // GENERAL */
-body{
+body {
     margin: 0;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-h1{
+h1 {
     font-family: 'Segoe UI Black';
     font-size: 35px;
     text-align: center;
 }
 
-p{
+p {
     font-family: monospace;
     font-size: 20px;
 }
 
-#project-title{
+#project-title {
     font-size: 70px;
     padding: 43px;
 }
+
 /* #endregion */
 
 /* #region // LOGO */
-.logo{
+.logo {
     height: 200px;
     margin-top: 20px;
     padding: 20px;
 }
 
-.logo_alt{
+.logo_alt {
     position: absolute;
 
     top: 16px;
@@ -39,20 +40,22 @@ p{
     height: 25px;
     margin: 0;
 }
+
 /* #endregion */
 
 /* #region // MAINTENCE */
-.maintence{
+.maintence {
     font-family: monospace;
     font-size: 2em;
     text-align: center;
 
     margin-top: 50px;
 }
+
 /* #endregion */
 
 /* #region // BUTTON - AUDIO */
-#button-audio{
+#button-audio {
     position: relative;
 
     font-size: 12px;
@@ -65,13 +68,14 @@ p{
     background-color: hsla(0, 0%, 100%, 0);
 }
 
-#button-audio:hover{
+#button-audio:hover {
     background-color: hsla(0, 0%, 100%, 0.2);
 }
+
 /* #endregion */
 
 /* #region // BUTTON - LANG */
-#button-lang{
+#button-lang {
     display: flex;
     align-items: center;
     position: relative;
@@ -94,27 +98,27 @@ p{
     transition: color 0.2s;
 }
 
-#button-lang:hover{
+#button-lang:hover {
     color: hsl(0, 0%, 75%);
 }
 
-.button-lang-icon{
+.button-lang-icon {
     position: relative;
 
     top: -1px;
     margin-right: 5px;
 }
 
-.lang-dropdown{
+.lang-dropdown {
     position: absolute;
     top: 100%;
     right: -15px;
     margin-top: 10px;
-    
+
     background-color: hsla(0, 0%, 100%, 0.1);
     border-radius: 5px;
     box-shadow: 0 4px 15px hsla(0, 0%, 0%, 0.2);
-    
+
     display: none;
     flex-direction: column;
     overflow: hidden;
@@ -122,15 +126,15 @@ p{
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    
+
     min-width: 200px;
 }
 
-.lang-dropdown.show{
+.lang-dropdown.show {
     display: flex;
 }
 
-.lang-dropdown-item{
+.lang-dropdown-item {
     padding: 15px 20px;
     font-family: monospace;
     font-size: 16px;
@@ -140,40 +144,42 @@ p{
     text-align: center;
 }
 
-.lang-dropdown-item:hover{
+.lang-dropdown-item:hover {
     background-color: hsl(0, 0%, 90%);
     color: hsl(0, 0%, 0%);
 }
+
 /* #endregion */
 
 /* #region // RESPONSIVE */
-@media (pointer: fine) and (hover: hover){
-    @media (max-width: 768px){
-        .navbar a{
+@media (pointer: fine) and (hover: hover) {
+    @media (max-width: 768px) {
+        .navbar a {
             width: 90px;
         }
 
-        #project-title{
+        #project-title {
             font-size: 50px;
             padding: 70px;
         }
     }
 }
 
-@media (pointer: coarse) and (hover: none){
-    header{
+@media (pointer: coarse) and (hover: none) {
+    header {
         font-size: 25px;
         padding: 20px;
     }
 
-    .logo{
+    .logo {
         height: 100px;
         padding: 0px;
     }
 
-    #project-title{
+    #project-title {
         font-size: 50px;
         padding: 1px;
     }
 }
+
 /* #endregion */

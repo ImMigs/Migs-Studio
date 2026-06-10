@@ -1,11 +1,11 @@
 /* #region // LOGO */
-.logo{
+.logo {
     height: 200px;
     margin-top: 20px;
     padding: 20px;
 }
 
-.logo_alt{
+.logo_alt {
     position: absolute;
 
     top: 16px;
@@ -13,4 +13,5 @@
     height: 25px;
     margin: 0;
 }
+
 /* #endregion */

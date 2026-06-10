@@ -1,10 +1,11 @@
-html{
+/* #region // GENERAL */
+html {
     height: 100%;
     overflow: hidden;
     overscroll-behavior: none;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,98 +17,15 @@ body{
     height: 100%;
     width: 100%;
     margin: 0;
+
+    background-position: left center;
+    background-size: cover;
 }
 
-/* BOTÃO - TRAILER */
-.container-trailer{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+/* #endregion */
 
-.botao-trailer{
-    font-family: 'Segoe UI';
-    font-size: 12px;
-
-    padding: 10px;
-
-    border: 2px solid hsla(0, 0%, 0%, 0);
-    border-radius: 15px;
-
-    color: hsl(0, 0%, 100%);
-    
-    background-color: hsla(0, 0%, 0%, 0.5);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-}
-
-.botao-trailer:hover, .botao-loja:hover{
-    border: 2px solid hsl(0, 0%, 100%);
-}
-
-/* BOTÃO - LIVE*/
-.botao-live{
-    font-family: 'Segoe UI Black';
-    font-size: 12px;
-
-    padding: 10px;
-
-    border: 2px solid hsl(0, 69%, 50%);
-    border-radius: 15px;
-
-    color: hsl(0, 69%, 50%);
-    
-    background-color: hsla(0, 0%, 100%, 0.5);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    
-}
-
-.botao-live:hover{
-    background-color: hsl(0, 0%, 100%);
-}
-
-/* BOTÃO - LOJA */
-.container-loja{
-    position: absolute;
-    bottom: 20px;
-    display: flex;
-    gap: 10px;
-}
-
-.botao-loja{
-    font-family: 'Segoe UI';
-    font-size: 12px;
-
-    width: 140px;
-    padding: 10px;
-
-    border: 2px solid hsla(0, 0%, 0%, 0);
-    border-radius: 15px;
-
-    color: hsl(0, 0%, 100%);
-    
-    background-color: hsla(0, 0%, 0%, 0.5);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-}
-
-/* LOGO */
-.logo{
-    display: block;
-    object-fit: contain;
-
-    height: 250px;
-    width: 600px;
-    
-    transition: height 1s;
-}
-
-/* TIMER */
-.container{
+/* #region // TIMER */
+.container {
     display: inline-block;
 
     font-family: monospace;
@@ -117,7 +35,7 @@ body{
     padding: 20px 40px;
 
     border-radius: 20px;
-    
+
     color: hsl(0, 0%, 90%);
     background-color: hsla(0, 0%, 0%, 0.5);
 
@@ -127,23 +45,32 @@ body{
     transition: font-size 1s;
 }
 
-.container:hover{
+/* #endregion */
+
+/* #region // LOGO */
+#countdown-logo-rev {
+    height: 200px;
+    transition: height 0.5s ease;
+}
+
+.container:hover {
     font-size: 80px;
 
     transition: font-size 1s;
 }
 
-.timers-wrapper{
+.timers-wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    
+
     gap: 100px;
 }
 
-.timer-group{
+.timer-group {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+/* #endregion */

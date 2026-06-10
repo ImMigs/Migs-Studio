@@ -1,5 +1,5 @@
 /* #region // MAIN */
-.subnavbar{
+.subnavbar {
     position: absolute;
 
     text-align: center;
@@ -12,7 +12,7 @@
     background-color: hsl(0, 0%, 0%);
 }
 
-.subnavbar ul{
+.subnavbar ul {
     overflow: hidden;
     list-style-type: none;
 
@@ -22,11 +22,11 @@
     padding: 0px;
 }
 
-.subnavbar li{
+.subnavbar li {
     display: inline;
 }
 
-.subnavbar-item a{
+.subnavbar-item a {
     display: inline-block;
     position: relative;
 
@@ -34,13 +34,13 @@
 
     padding: 15px 5px;
 
-    color:hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
 }
 
-.subnavbar a::after{
+.subnavbar a::after {
     position: absolute;
     content: '';
-    
+
     height: 2px;
     width: 0;
     bottom: 10px;
@@ -51,21 +51,22 @@
     transition: width 0.3s ease;
 }
 
-.subnavbar-item:hover a::after{
+.subnavbar-item:hover a::after {
     width: calc(100% - 20px);
 }
 
-.subnavbar-item{
+.subnavbar-item {
     font-family: 'Oswald';
     font-size: 15px;
     font-weight: 700;
 
     margin-top: -5px;
 }
+
 /* #endregion */
 
 /* #region // LEFT */
-.subnavbar-left{
+.subnavbar-left {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -76,10 +77,11 @@
     gap: 15px;
     z-index: 2000;
 }
+
 /* #endregion */
 
 /* #region // RIGHT */
-.subnavbar-right{
+.subnavbar-right {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -91,28 +93,33 @@
     z-index: 2000;
     min-height: 40px;
 }
+
 /* #endregion */
 
 /* #region // RESPONSIVE */
-@media (pointer: coarse) and (hover: none){
-    .subnavbar a::after{
+@media (pointer: coarse) and (hover: none) {
+    .subnavbar a::after {
         background-color: hsla(0, 0%, 0%, 0);
     }
 }
 
-@media (max-width: 768px){
-    .logo_alt{
+@media (max-width: 768px) {
+    .logo_alt {
         position: relative;
         left: 0;
     }
 
-    .subnavbar-left, .subnavbar-right, #button-lang, #button-audio{
+    .subnavbar-left,
+    .subnavbar-right,
+    #button-lang,
+    #button-audio {
         display: none;
     }
 
-    .subnavbar-left{
+    .subnavbar-left {
         width: auto;
         justify-content: flex-start;
     }
 }
+
 /* #endregion */

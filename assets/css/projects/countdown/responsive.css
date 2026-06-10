@@ -1,94 +1,82 @@
-/* COMPUTADORES */
-@media (pointer: fine) and (hover: hover){
-    @media (max-width: 1500px), (max-height: 768px){
-        .logo{
-            height: 150px;
+/* #region // PC */
+@media (pointer: fine) and (hover: hover) {
+    @media (max-width: 1500px),
+    (max-height: 768px) {
+        #countdown-logo-rev {
+            height: 125px;
         }
 
-        .container{
-            font-size: 40px;
-
-            padding: 20px 40px;
-        }
-
-        .container:hover{
-            font-size: 45px;
-
-            padding: 20px 40px;
-        }
-
-        .container-loja{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        #timer {
+            font-size: 35px;
         }
     }
 }
 
-/* DISPOSITIVOS MÓVEIS */
-@media (pointer: coarse) and (hover: none){
-    .botao-trailer:hover, #botao-mute:hover, #botao-idioma:hover, .botao-loja:hover{
+/* #endregion */
+
+/* #region // MOBILE */
+@media (pointer: coarse) and (hover: none) {
+
+    #button-audio:hover,
+    #button-lang:hover {
         border: 2px solid hsla(0, 0%, 0%, 0);
     }
 
-    .botao-live:hover{
-        background-color: hsla(0, 0%, 100%, 0.5);
+    #countdown-logo-rev {
+        height: 100px !important;
     }
 
-    .container-loja{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .botao-loja{
-        font-size: 10px;
-    }
-
-    .logo{
-        height: 150px;
-    }
-
-    .container:hover{
-        font-size: 45px;
-
+    .container:hover {
         padding: 20px 40px;
     }
 
-    .timers-wrapper{
+    .container:hover #timer {
+        font-size: 45px;
+    }
+
+    .timers-wrapper {
         gap: 20px;
     }
 
-    @media (orientation: portrait){
-        .timers-wrapper{
+    @media (orientation: portrait) {
+        .timers-wrapper {
             flex-direction: column;
             align-items: center;
 
             gap: 0px;
         }
 
-        .container{
-            font-size: 40px;
-
+        .container {
             margin-top: 20px;
             padding: 20px 40px;
         }
+
+        #timer {
+            font-size: 40px;
+        }
     }
-    
-    @media (orientation: landscape){
-        .timers-wrapper{
+
+    @media (orientation: landscape) {
+        .timers-wrapper {
             flex-wrap: nowrap;
 
             gap: 0px;
         }
 
-        .container{
-            font-size: 40px;
+        .container {
             white-space: nowrap;
 
             margin-top: 5px;
         }
 
-        .container-loja{
+        #timer {
+            font-size: 40px;
+        }
+
+        .container-loja {
             display: flex;
         }
     }
- }
+}
+
+/* #endregion */
