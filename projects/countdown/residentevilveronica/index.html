@@ -71,7 +71,7 @@
             transition: opacity 0.5s ease-in-out !important;
         }
 
-        body.news-open .subnavbar {
+        .subnavbar.hide {
             opacity: 0 !important;
             pointer-events: none !important;
         }
@@ -307,9 +307,11 @@
             const newsSection = document.getElementById('last-news');
             const scrollDownBtn = document.querySelector('.scroll-down-wrapper');
             const timersWrapper = document.querySelector('.timers-wrapper');
+            const subnavbar = document.querySelector('.subnavbar');
             
             if (scrollDownBtn) scrollDownBtn.classList.add('hide'); // Esconde o botão LAST NEWS
             if (timersWrapper) timersWrapper.classList.add('hide-timer'); // Inicia o fade-out do contador
+            if (subnavbar) subnavbar.classList.add('hide'); // Inicia o fade-out da navbar junto com o contador
             
             // Aguarda o contador sumir para mostrar as notícias (500ms)
             timerFadeTimeout = setTimeout(() => {
@@ -332,6 +334,7 @@
             const newsSection = document.getElementById('last-news');
             const scrollDownBtn = document.querySelector('.scroll-down-wrapper');
             const timersWrapper = document.querySelector('.timers-wrapper');
+            const subnavbar = document.querySelector('.subnavbar');
             
             window.scrollTo({ top: 0, behavior: 'smooth' }); // Rola de volta ao topo
             newsSection.classList.remove('show'); // Inicia o sumiço do bloco preto (fade-out)
@@ -347,6 +350,7 @@
                     
                     setTimeout(() => {
                         timersWrapper.classList.remove('hide-timer'); // Fade-in do contador
+                        if (subnavbar) subnavbar.classList.remove('hide'); // Fade-in da navbar
                     }, 10);
                 }
             }, 500);
