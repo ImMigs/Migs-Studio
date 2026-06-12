@@ -42,8 +42,183 @@
     <!-- #region // BACKGROUND -->
     <style>
         body {
+            overflow-y: auto !important; /* Força a rolagem a funcionar caso bloqueada por outro CSS */
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             background-image: url('/assets/img/projects/countdown/backgrounds/background-rev.jpg');
             background-size: cover;
+            background-position: center;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        body.news-open {
+            justify-content: flex-start !important;
+            height: auto !important;
+            min-height: 100vh !important;
+        }
+
+        .subnavbar {
+            z-index: 9999 !important;
+            transition: opacity 0.5s ease-in-out !important;
+        }
+
+        body.news-open .subnavbar {
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-y: auto !important;
+        }
+
+        .timers-wrapper {
+            transition: opacity 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .timers-wrapper.hide-timer {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .scroll-down-wrapper {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            transition: opacity 0.5s ease;
+        }
+
+        .scroll-down-wrapper.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .scroll-down-btn {
+            color: white;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-down-btn:hover {
+            opacity: 1;
+            transform: translateY(5px);
+        }
+
+        .last-news-section {
+            display: none;
+            opacity: 0;
+            height: auto !important;
+            transition: opacity 0.5s ease-in-out;
+            min-height: 100vh;
+            padding: 80px 20px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+        }
+
+        .last-news-section.show {
+            opacity: 1;
+        }
+
+        .scroll-up-btn {
+            color: white;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            margin-bottom: 40px;
+        }
+
+        .scroll-up-btn:hover {
+            opacity: 1;
+            transform: translateY(-5px);
+        }
+
+        /* PADRÃO DOS CARDS DE NOTÍCIAS */
+        .news-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: 40px auto 0;
+            text-align: left;
+        }
+
+        .news-item {
+            display: flex;
+            background: rgba(255, 255, 255, 0.1); /* Fundo translúcido elegante */
+            border-radius: 10px;
+            padding: 20px;
+            gap: 20px;
+            align-items: flex-start;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .news-image {
+            width: 200px;
+            height: 120px;
+            object-fit: cover; /* Garante que a imagem preencha a caixa sem distorcer */
+            border-radius: 8px;
+            flex-shrink: 0; /* Impede que a imagem encolha muito se o texto for grande */
+        }
+
+        .news-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .news-date {
+            font-weight: 700; /* Data em negrito */
+            font-size: 1.1rem;
+            color: #f0f0f0;
+        }
+
+        .news-text {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1rem;
+            color: #cccccc;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 600px) {
+            .news-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .news-image {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 16/9;
+            }
         }
     </style>
     <!-- #endregion -->
@@ -65,7 +240,7 @@
             <button id="button-lang">🌐</button>
             <!-- <button id="button-audio">🔇</button>-->
         </div>
-    </div><br><br>
+    </div>
     <!-- #endregion -->
 
     <!-- #region // TIMER -->
@@ -77,7 +252,106 @@
                 <div id="timer">2027</div>
             </div>
         </div>
+        
+        <div class="scroll-down-wrapper">
+            <a href="#last-news" class="scroll-down-btn" onclick="showLastNews(event)">
+                <span data-i18n="countdown_news_title">-</span> <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
     </div>
+    <!-- #endregion -->
+
+    <!-- #region // LAST NEWS -->
+    <div id="last-news" class="last-news-section">
+        <a href="#" class="scroll-up-btn" onclick="hideLastNews(event)">
+            <i class="fa-solid fa-chevron-up"></i> <span data-i18n="countdown_back">-</span>
+        </a>
+        <h2 data-i18n="countdown_news_title">-</h2>
+        
+        <div class="news-container">
+            <!-- NEWS #2 -->
+            <a target="_blank" href="https://www.reddit.com/r/residentevil/comments/1u26mj3/resident_evil_veronica_interview_ign/">
+            <div class="news-item">
+                <img src="/assets/img/projects/countdown/icons/rev_news_2.webp" alt="Imagem da Notícia" class="news-image">
+                
+                <div class="news-content">
+                    <span class="news-date" data-i18n="countdown_news_2_title">-</span>
+                    <p class="news-text" data-i18n="countdown_news_2_content">-</p>
+                </div>
+            </div>
+            </a>
+            
+            <!-- NEWS #1 -->
+            <a target="_blank" href="https://www.youtube.com/watch?v=uxUMXniTfjM&t=5s">
+            <div class="news-item">
+                <img src="/assets/img/projects/countdown/icons/rev_news_1.jpg" alt="Imagem da Notícia" class="news-image">
+                
+                <div class="news-content">
+                    <span class="news-date" data-i18n="countdown_news_1_title">-</span>
+                    <p class="news-text" data-i18n="countdown_news_1_content">-</p>
+                </div>
+            </div>
+            </a>
+
+        </div>
+    </div>
+
+    <script>
+        let hideNewsTimeout; // Variável para controlar o temporizador do fade-out
+        let timerFadeTimeout; // Variável para controlar o temporizador do contador
+
+        function showLastNews(event) {
+            event.preventDefault();
+            clearTimeout(hideNewsTimeout); // Cancela o fechamento se o usuário clicar rápido demais
+            clearTimeout(timerFadeTimeout);
+            const newsSection = document.getElementById('last-news');
+            const scrollDownBtn = document.querySelector('.scroll-down-wrapper');
+            const timersWrapper = document.querySelector('.timers-wrapper');
+            
+            if (scrollDownBtn) scrollDownBtn.classList.add('hide'); // Esconde o botão LAST NEWS
+            if (timersWrapper) timersWrapper.classList.add('hide-timer'); // Inicia o fade-out do contador
+            
+            // Aguarda o contador sumir para mostrar as notícias (500ms)
+            timerFadeTimeout = setTimeout(() => {
+                if (timersWrapper) timersWrapper.style.display = 'none'; // Some com o timer do layout
+                
+                document.body.classList.add('news-open'); // Evita que o Flexbox empurre a tela pra cima
+                newsSection.style.display = 'block'; 
+                window.scrollTo(0, 0); // Força a tela para o topo
+                
+                setTimeout(() => {
+                    newsSection.classList.add('show'); // Fade-in suave das notícias
+                }, 10);
+            }, 500);
+        }
+
+        function hideLastNews(event) {
+            event.preventDefault();
+            clearTimeout(hideNewsTimeout);
+            clearTimeout(timerFadeTimeout);
+            const newsSection = document.getElementById('last-news');
+            const scrollDownBtn = document.querySelector('.scroll-down-wrapper');
+            const timersWrapper = document.querySelector('.timers-wrapper');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Rola de volta ao topo
+            newsSection.classList.remove('show'); // Inicia o sumiço do bloco preto (fade-out)
+            
+            // Aguarda o tempo da rolagem e do fade (500ms) antes de apagar totalmente
+            hideNewsTimeout = setTimeout(() => {
+                newsSection.style.display = 'none';
+                document.body.classList.remove('news-open'); // Restaura o alinhamento original
+                
+                if (timersWrapper) {
+                    timersWrapper.style.display = 'flex'; // Devolve o espaço do contador
+                    if (scrollDownBtn) scrollDownBtn.classList.remove('hide'); // Traz o botão LAST NEWS de volta
+                    
+                    setTimeout(() => {
+                        timersWrapper.classList.remove('hide-timer'); // Fade-in do contador
+                    }, 10);
+                }
+            }, 500);
+        }
+    </script>
     <!-- #endregion -->
 
     <!-- #region // AUDIO SETUP -->
@@ -89,7 +363,7 @@
     <!-- #region // TIMER SETUP -->
     <script src="/assets/js/projects/countdown/countdown.js"></script>
     <script>
-        // const targetDate = new Date(Date.UTC(2027, 0, 0, 0, 0, 0));
+        // const targetDate = new Date(Date.UTC(2027, 10, 0, 0, 0, 0));
         // new CountdownTimer(targetDate, 'timer');
     </script>
     <!-- #endregion -->

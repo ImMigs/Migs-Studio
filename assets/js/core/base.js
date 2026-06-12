@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const loadTranslations = async (lang) => {
         try{
-            const response = await fetch(`/assets/lang/${lang}.json`);
+            const response = await fetch(`/assets/lang/${lang}.json`, { cache: 'no-cache' });
             if(!response.ok) throw new Error(`Erro ao carregar idioma: ${lang}`);
             return await response.json();
         }catch(error){
