@@ -13,9 +13,12 @@
   "countdown_news_title": "NEWS HISTORY",
   "countdown_back": "BACK",
 
-  "countdown_news_1_title": "06/05/2026 | Announcement Trailer",
-  "countdown_news_1_content": "The remake of Resident Evil: Code Veronica (2000) was announced by Capcom at Summer Game Fest, titled Resident Evil Veronica. Announced for 2027.",
+  "countdown_news_1_title": "06.05.2026 | Announcement Trailer",
+  "countdown_news_1_content": "The remake of Resident Evil: Code Veronica (2000) was announced by Capcom at the Summer Game Fest under the title Resident Evil Veronica. It is slated for a 2027 release.",
 
-  "countdown_news_2_title": "06/10/2026 | Interview",
-  "countdown_news_2_content": "Capcom gave an interview answering several questions about the remake. No new images were shown in this interview."
+  "countdown_news_2_title": "06.10.2026 | Interview",
+  "countdown_news_2_content": "Capcom gave an interview answering several questions about the remake. No new images or footage were shown at the time.",
+
+  "countdown_news_3_title": "06.12.2026 | Capcom x Gamescom",
+  "countdown_news_3_content": "Capcom has confirmed its presence at Gamescom, which takes place this year between August 26th and 30th. However, there is no confirmation whether Resident Evil will be featured at the event."
 }
