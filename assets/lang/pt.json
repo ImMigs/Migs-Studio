@@ -12,12 +12,23 @@
   "countdown_news_title": "HISTÓRICO DE NOTÍCIAS",
   "countdown_back": "VOLTAR",
 
-  "countdown_news_1_title": "05.06.2026 | Trailer de Anúncio",
-  "countdown_news_1_content": "O remake de Resident Evil: Code Veronica (2000) foi anunciado pela Capcom na Summer Game Fest sob o título de Resident Evil Veronica. O lançamento está previsto para 2027.",
+  "countdown_rev_news_1_title": "05.06.2026 | Trailer de Anúncio",
+  "countdown_rev_news_1_content": "O remake de Resident Evil: Code Veronica (2000) foi anunciado pela Capcom na Summer Game Fest sob o título de Resident Evil Veronica. O lançamento está previsto para 2027.",
+  "countdown_rev_news_2_title": "10.06.2026 | Entrevista",
+  "countdown_rev_news_2_content": "Capcom deu uma entrevista respondendo a várias perguntas sobre o remake. Nenhuma nova imagem ou gravação foi exibida durante a ocasião.",
+  "countdown_rev_news_3_title": "12.06.2026 | Gamescom x Capcom",
+  "countdown_rev_news_3_content": "Capcom confirmou sua presença na Gamescom, que acontece este ano entre os dias 26 e 30 de agosto. No entanto, não há confirmação se Resident Evil estará presente no evento.",
 
-  "countdown_news_2_title": "10.06.2026 | Entrevista",
-  "countdown_news_2_content": "Capcom deu uma entrevista respondendo a várias perguntas sobre o remake. Nenhuma nova imagem ou gravação foi exibida durante a ocasião.",
-
-  "countdown_news_3_title": "12.06.2026 | Gamescom x Capcom",
-  "countdown_news_3_content": "Capcom confirmou sua presença na Gamescom, que acontece este ano entre os dias 26 e 30 de agosto. No entanto, não há confirmação se Resident Evil estará presente no evento."
+  "countdown_re9_news_1_title": "06.06.2026 | Trailer de Anúncio",
+  "countdown_re9_news_1_content": "O jogo Resident Evil Requiem foi anunciado pela Capcom na Summer Game Fest. O lançamento está previsto para 2026.",
+  "countdown_re9_news_2_title": "12.09.2025 | Segundo Trailer",
+  "countdown_re9_news_2_content": "Durante a realização do evento Nintendo Direct, a Capcom divulgou o segundo trailer oficial de Resident Evil Requiem. O novo material promocional revelou trechos inéditos de jogabilidade e cenários, expandindo os detalhes visuais do título antes de seu lançamento.",
+  "countdown_re9_news_3_title": "29.10.2026 | Rumo ao Requiem",
+  "countdown_re9_news_3_content": "Capcom divulgou um vídeo intitulado Road to Requiem, desenvolvido como um guia preparatório para os jogadores.",
+  "countdown_re9_news_4_title": "11.12.2026 | Terceiro Trailer",
+  "countdown_re9_news_4_content": "Durante o evento The Game Awards, a Capcom apresentou o terceiro trailer oficial de Resident Evil Requiem. O material revelou o retorno de Leon S. Kennedy à ação, confirmando a presença do icônico personagem como um dos destaques deste novo título.",
+  "countdown_re9_news_301_title": "07.05.2026 | Leon Must Die Forever (Atualização Gratuita)",
+  "countdown_re9_news_301_content": "Enquanto a DLC de Resident Evil Requiem segue em desenvolvimento, a Capcom disponibilizou uma atualização gratuita para o título, introduzindo um modo com mecânicas rogue-like, no qual o jogador controla Leon em cenários já conhecidos.",
+  "countdown_re9_news_302_title": "10.03.2026 | Novo Conteúdo Gratuito + DLC Anunciada",
+  "countdown_re9_news_302_content": "O diretor de Resident Evil Requiem, Koshi Nakanishi, revelou as próximas novidades do título. O jogo receberá novos conteúdos, incluindo a adição de um Modo Foto e uma atualização gratuita planejada para maio. Além disso, o diretor confirmou o desenvolvimento de uma DLC."
 }

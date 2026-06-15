@@ -101,8 +101,8 @@
                     <img src="/assets/img/projects/countdown/icons/rev_news_3.jpg" alt="News Image" class="news-image">
 
                     <div class="news-content">
-                        <span class="news-date" data-i18n="countdown_news_3_title">-</span>
-                        <p class="news-text" data-i18n="countdown_news_3_content">-</p>
+                        <span class="news-date" data-i18n="countdown_rev_news_3_title">-</span>
+                        <p class="news-text" data-i18n="countdown_rev_news_3_content">-</p>
                     </div>
                 </div>
             </a>
@@ -113,8 +113,8 @@
                     <img src="/assets/img/projects/countdown/icons/rev_news_2.webp" alt="News Image" class="news-image">
 
                     <div class="news-content">
-                        <span class="news-date" data-i18n="countdown_news_2_title">-</span>
-                        <p class="news-text" data-i18n="countdown_news_2_content">-</p>
+                        <span class="news-date" data-i18n="countdown_rev_news_2_title">-</span>
+                        <p class="news-text" data-i18n="countdown_rev_news_2_content">-</p>
                     </div>
                 </div>
             </a>
@@ -125,8 +125,8 @@
                     <img src="/assets/img/projects/countdown/icons/rev_news_1.jpg" alt="News Image" class="news-image">
 
                     <div class="news-content">
-                        <span class="news-date" data-i18n="countdown_news_1_title">-</span>
-                        <p class="news-text" data-i18n="countdown_news_1_content">-</p>
+                        <span class="news-date" data-i18n="countdown_rev_news_1_title">-</span>
+                        <p class="news-text" data-i18n="countdown_rev_news_1_content">-</p>
                     </div>
                 </div>
             </a>
@@ -134,66 +134,6 @@
         </div>
     </div>
 
-    <script>
-        let hideNewsTimeout; // Variável para controlar o temporizador do fade-out
-        let timerFadeTimeout; // Variável para controlar o temporizador do contador
-
-        function showLastNews(event) {
-            event.preventDefault();
-            clearTimeout(hideNewsTimeout); // Cancela o fechamento se o usuário clicar rápido demais
-            clearTimeout(timerFadeTimeout);
-            const newsSection = document.getElementById('last-news');
-            const scrollDownBtn = document.querySelector('.scroll-down-wrapper');
-            const timersWrapper = document.querySelector('.timers-wrapper');
-            const subnavbar = document.querySelector('.subnavbar');
-
-            if (scrollDownBtn) scrollDownBtn.classList.add('hide'); // Esconde o botão LAST NEWS
-            if (timersWrapper) timersWrapper.classList.add('hide-timer'); // Inicia o fade-out do contador
-            if (subnavbar) subnavbar.classList.add('hide'); // Inicia o fade-out da navbar junto com o contador
-
-            // Aguarda o contador sumir para mostrar as notícias (500ms)
-            timerFadeTimeout = setTimeout(() => {
-                if (timersWrapper) timersWrapper.style.display = 'none'; // Some com o timer do layout
-
-                document.body.classList.add('news-open'); // Evita que o Flexbox empurre a tela pra cima
-                newsSection.style.display = 'block';
-                window.scrollTo(0, 0); // Força a tela para o topo
-
-                setTimeout(() => {
-                    newsSection.classList.add('show'); // Fade-in suave das notícias
-                }, 10);
-            }, 500);
-        }
-
-        function hideLastNews(event) {
-            event.preventDefault();
-            clearTimeout(hideNewsTimeout);
-            clearTimeout(timerFadeTimeout);
-            const newsSection = document.getElementById('last-news');
-            const scrollDownBtn = document.querySelector('.scroll-down-wrapper');
-            const timersWrapper = document.querySelector('.timers-wrapper');
-            const subnavbar = document.querySelector('.subnavbar');
-
-            window.scrollTo({ top: 0, behavior: 'smooth' }); // Rola de volta ao topo
-            newsSection.classList.remove('show'); // Inicia o sumiço do bloco preto (fade-out)
-
-            // Aguarda o tempo da rolagem e do fade (500ms) antes de apagar totalmente
-            hideNewsTimeout = setTimeout(() => {
-                newsSection.style.display = 'none';
-                document.body.classList.remove('news-open'); // Restaura o alinhamento original
-
-                if (timersWrapper) {
-                    timersWrapper.style.display = 'flex'; // Devolve o espaço do contador
-                    if (scrollDownBtn) scrollDownBtn.classList.remove('hide'); // Traz o botão LAST NEWS de volta
-
-                    setTimeout(() => {
-                        timersWrapper.classList.remove('hide-timer'); // Fade-in do contador
-                        if (subnavbar) subnavbar.classList.remove('hide'); // Fade-in da navbar
-                    }, 10);
-                }
-            }, 500);
-        }
-    </script>
     <!-- #endregion -->
 
     <!-- #region // AUDIO SETUP -->

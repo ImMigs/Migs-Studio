@@ -74,7 +74,7 @@
             <button id="button-lang">🌐</button>
             <button id="button-audio">🔇</button>
         </div>
-    </div><br><br>
+    </div>
     <!-- #endregion -->
 
     <!-- #region // TIMER -->
@@ -86,7 +86,98 @@
                 <div id="timer" data-i18n="countdown_re9_dlc">-</div>
             </div>
         </div>
+
+        <div class="scroll-down-wrapper">
+            <a href="#last-news" class="scroll-down-btn" onclick="showLastNews(event)">
+                <span data-i18n="countdown_news_title">-</span> <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
     </div>
+    <!-- #endregion -->
+
+    <!-- #region // NEWS HISTORY -->
+    <div id="last-news" class="news-section">
+        <a href="#" class="scroll-up-btn" onclick="hideLastNews(event)">
+            <i class="fa-solid fa-chevron-up"></i> <span data-i18n="countdown_back">-</span>
+        </a>
+        <h2 data-i18n="countdown_news_title">-</h2>
+
+        <div class="news-container">
+            <!-- NEWS #301 | Leon Must Die Forever (Free Update) -->
+            <a target="_blank" href="https://youtu.be/tYd5DfcGyS4?si=Zr3czTw6iFZ2pEjN">
+                <div class="news-item">
+                    <img src="/assets/img/projects/countdown/icons/re9_news_301.jpg" alt="News Image" class="news-image">
+
+                    <div class="news-content">
+                        <span class="news-date" data-i18n="countdown_re9_news_301_title">-</span>
+                        <p class="news-text" data-i18n="countdown_re9_news_301_content">-</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- NEWS #302 | Free Content + DLC Announced -->
+            <a target="_blank" href="https://x.com/RE_Games/status/2031325052268921100">
+                <div class="news-item">
+                    <img src="/assets/img/projects/countdown/icons/re9_news_302.png" alt="News Image" class="news-image">
+
+                    <div class="news-content">
+                        <span class="news-date" data-i18n="countdown_re9_news_302_title">-</span>
+                        <p class="news-text" data-i18n="countdown_re9_news_302_content">-</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- NEWS #4 | Third Trailer -->
+            <a target="_blank" href="https://youtu.be/T54OWinnymM?si=1FcHk1F2Mhvwa-_e">
+                <div class="news-item">
+                    <img src="/assets/img/projects/countdown/icons/re9_news_4.jpg" alt="News Image" class="news-image">
+
+                    <div class="news-content">
+                        <span class="news-date" data-i18n="countdown_re9_news_4_title">-</span>
+                        <p class="news-text" data-i18n="countdown_re9_news_4_content">-</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- NEWS #3 | Road to Requiem -->
+            <a target="_blank" href="https://youtu.be/SQODLCylKbM?si=KigR0NJyzBc7vPEB">
+                <div class="news-item">
+                    <img src="/assets/img/projects/countdown/icons/re9_news_3.jpg" alt="News Image" class="news-image">
+
+                    <div class="news-content">
+                        <span class="news-date" data-i18n="countdown_re9_news_3_title">-</span>
+                        <p class="news-text" data-i18n="countdown_re9_news_3_content">-</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- NEWS #2 | Second Trailer -->
+            <a target="_blank" href="https://youtu.be/0wFNN1f6hF8?si=ekyvl6cVn7p5XVEP">
+                <div class="news-item">
+                    <img src="/assets/img/projects/countdown/icons/re9_news_2.jpg" alt="News Image" class="news-image">
+
+                    <div class="news-content">
+                        <span class="news-date" data-i18n="countdown_re9_news_2_title">-</span>
+                        <p class="news-text" data-i18n="countdown_re9_news_2_content">-</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- NEWS #1 | Announcement Trailer -->
+            <a target="_blank" href="https://youtu.be/POz1-EmLsTY?si=9Neh0fDVrO7slW17">
+                <div class="news-item">
+                    <img src="/assets/img/projects/countdown/icons/re9_news_1.jpg" alt="News Image" class="news-image">
+
+                    <div class="news-content">
+                        <span class="news-date" data-i18n="countdown_re9_news_1_title">-</span>
+                        <p class="news-text" data-i18n="countdown_re9_news_1_content">-</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
     <!-- #endregion -->
 
     <!-- #region // AUDIO SETUP -->
