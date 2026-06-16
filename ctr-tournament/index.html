@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/img/logos/logo_2.png">
+    <title>CTR Tournament</title>
+
+    <!-- #region // *OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://migs-studio.com.br/projects/countdown/residentevilveronica">
+    <meta property="og:title" content="Resident Evil Veronica | Countdown">
+    <meta property="og:description"
+        content="A countdown to Resident Evil Veronica, the newest game of the franchise created by Capcom. Releasing in 2027.">
+    <meta property="og:image"
+        content="https://www.migs-studio.com.br/assets/img/projects/countdown/banners/banner-rev.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://migs-studio.com.br/projects/countdown/residentevilveronica">
+    <meta name="twitter:title" content="Resident Evil Veronica | Countdown">
+    <meta name="twitter:description"
+        content="A countdown to Resident Evil Veronica, the newest game of the franchise created by Capcom. Releasing in 2027.">
+    <meta name="twitter:image"
+        content="https://www.migs-studio.com.br/assets/img/projects/countdown/banners/banner-rev.png">
+    <!-- #endregion -->
+
+    <!-- #region // *CSS -->
+    <link rel="stylesheet" href="/assets/css/global/base.css">
+    <link rel="stylesheet" href="/assets/css/global/subnavbar.css">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- #endregion -->
+
+    <!-- #region // FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/161ec40ef8.js" crossorigin="anonymous"></script>
+    <!-- #endregion -->
+
+    <!-- #region // BACKGROUND -->
+    <style>
+        body::before {
+            background-image: url('/assets/img/backgrounds/background.png');
+        }
+
+        .subnavbar-right {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Espaço entre o botão de idioma e a foto/botão de login */
+        }
+    </style>
+    <!-- #endregion -->
+</head>
+
+<body>
+    <!-- #region // SUBNAVBAR -->
+    <div class="subnavbar">
+        <div id="subnavbar-background"></div>
+        <a href="/" target="_self"><img src="/assets/img/logos/logo.png" alt="logo" class="logo_alt"></a>
+        <ul class="subnavbar-left">
+            <li class="subnavbar-item"><a href="https://www.youtube.com/vovobalatensa" target="_blank"
+                    data-i18n="home_youtube">-</a></li>
+            <li class="subnavbar-item"><a href="https://discord.gg/HB3mVw8" target="_blank"
+                    data-i18n="home_discord">-</a></li>
+            <li class="subnavbar-item"><a href="" target="_blank" data-i18n="home_history">-</a></li>
+            <li class="subnavbar-item"><a href="" target="_blank" data-i18n="home_subscribe">-</a></li>
+            <li class="subnavbar-item"><a href="" target="_blank" data-i18n="home_rules">-</a></li>
+        </ul>
+
+        <div class="subnavbar-right">
+            <button id="button-lang">🌐</button>
+            <div id="google-login-btn"></div>
+            <img id="user-profile-pic" style="display: none; width: 40px; height: 40px; border-radius: 50%; object-fit: cover; cursor: pointer; border: 2px solid rgba(255, 255, 255, 0.5);" alt="Foto de Perfil do Usuário">
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region // MAIN -->
+    <div class="main">
+        <div class="content-left">
+            <!--
+            <h1 data-i18n="home_live">-</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1GKhUB0hiQk?si=FzOJrtagaSe9vpZG&autoplay=1&mute=1"
+                title="YouTube video player" frameborder="1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            -->
+
+            <p data-i18n="home_description">-</p>
+            <div class="buttons">
+                <button data-i18n="home_subscribe">-</button>
+                <button data-i18n="home_rules">-</button>
+            </div>
+        </div>
+
+        <div class="content-right">
+            <img src="/assets/img/logos/logo_2.png" alt="Logo CTR Tournament">
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region // GOOGLE LOGIN -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        function handleCredentialResponse(response) {
+            // Decodifica o payload do token JWT para obter os dados do usuário (nome, foto, email)
+            const base64Url = response.credential.split('.')[1];
+            const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+            const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+            const payload = JSON.parse(jsonPayload);
+
+            // Oculta o botão do Google e exibe a foto do usuário
+            document.getElementById('google-login-btn').style.display = 'none';
+            
+            const userProfilePic = document.getElementById('user-profile-pic');
+            userProfilePic.src = payload.picture;
+            userProfilePic.title = payload.name; // Exibe o nome do usuário ao passar o mouse por cima
+            userProfilePic.style.display = 'block';
+        }
+
+        window.addEventListener('load', function () {
+            google.accounts.id.initialize({
+                client_id: "SEU_CLIENT_ID_AQUI.apps.googleusercontent.com", // IMPORTANTE: Substitua pelo seu Client ID real
+                callback: handleCredentialResponse
+            });
+
+            // Renderiza o botão oficial do Google com formato circular (ícone)
+            google.accounts.id.renderButton(
+                document.getElementById("google-login-btn"),
+                { theme: "outline", size: "large", type: "icon", shape: "circle" }
+            );
+        });
+    </script>
+    <!-- #endregion -->
+
+    <script src="/assets/js/core/base.js"></script>
+</body>
